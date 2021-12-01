@@ -1,0 +1,79 @@
+@import "./base/reset", "./base/variables";
+@import "./layout/header", "./layout/hero";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$ancho: 720px;
+$red:red;
+$black: black;
+$espaciado: 10px;
+$espaciado2: 15px;
+$blanco: white;
+
+.box_uno {
+    color: $red;
+    background-color: $blanco;
+    width: $ancho/2;
+    padding: $espaciado + $espaciado2;
+}
+
+.box_dos {
+    $espaciado2: 10px;
+    background-color: $red;
+    width: ($ancho/2)-50;
+    padding: ($espaciado * 2) + $espaciado2;
+}
+// BUCLES
+$i: 1;
+$vueltas: 6;
+@for $i from 1 through $vueltas {
+    .casitodos-#{$i} {
+        background-color: lightgray;
+        width: 100px * $i;
+    }
+}
+/* Each */
+$dimension: 320px;
+
+
+
+$lista: hoodie1, hoodie2, hoodie3;
+@each $ropa in $lista {
+    .#{$ropa}-fondo {
+        width: $dimension * 2;
+        height: $dimension;
+        background-image: url("../images/#{$animal}.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border: 2px solid red;
+    }
+}
+
+@each $ropa in hoodie1, hoodie2, phoodie3, hoodie4, hoodie5 {
+    .#{$ropa}-fondo {
+        
+        background-image: url("../images/#{ropa}.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 620px;
+        height: 230px;
+    }
+}
+
+/* Maps */
+$redes:(twitter:#55acee, facebook:#3a5795, sendmail:#c25E30);
+$colores:(color1:#333333, color2:#666666, color3:#999999);
+
+@each $clave, $valor in $redes {
+    .btn-#{$clave} {
+        background-color:$valor;
+    }
+}
+
+@each $clave2, $valor2 in $colores {
+    .#{$clave2} {
+        color:$valor2;
+    }
+}

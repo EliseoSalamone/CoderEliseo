@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Monserrat", sans-serif;
+}
+
+header {
+  display: none;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.hero_content {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.hero_title span {
+  display: block;
+  font-size: 5rem;
+}
+/*# sourceMappingURL=main.css.map */
